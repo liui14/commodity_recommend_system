@@ -1,24 +1,62 @@
-# Compiled class file
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略IDE和编辑器生成的文件
+
+
+# 忽略日志文件
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+
+
+# 忽略Java编译生成文件
 *.class
 
-# Log file
-*.log
+# 忽略Node.js相关的依赖和缓存
+/user_web/node_modules/
+/admin_web/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# BlueJ files
-*.ctxt
+# 忽略Vue3项目的打包输出
+/user_web/dist/
+/admin_web/dist/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# 忽略临时文件和调试输出
+*.swp
+*.swo
+*.bak
+*.tmp
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# 忽略测试覆盖率报告
+/user_web/coverage/
+/admin_web/coverage/
+/web_server/coverage/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# 忽略环境配置文件（根据需要修改）
+/user_web/.env
+/admin_web/.env
+/user_web/.env.local
+/admin_web/.env.local
+
+# 忽略缓存文件
+/user_web/.vite/
+/admin_web/.vite/
+/user_web/.cache/
+/admin_web/.cache/
+
+# 忽略特定工具生成的文件
+/web_server/out/
+/web_server/.classpath
+/web_server/.project
+/web_server/.settings/
+
+# 忽略私密文件或个人配置
+/web_server/src/main/resources/application.properties
+/web_server/src/main/resources/application.yml
