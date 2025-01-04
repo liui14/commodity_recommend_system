@@ -60,3 +60,6 @@ yarn-error.log*
 # 忽略私密文件或个人配置
 /web_server/src/main/resources/application.properties
 /web_server/src/main/resources/application.yml
+
+# 忽略编译结果
+/web_server/target
