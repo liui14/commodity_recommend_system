@@ -1,5 +1,6 @@
 package com.recommend.service.verify;
 
+import com.recommend.domain.vo.ImageVO;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public interface VerifyService {
      * @return {@link String}
      * @throws IOException ioexception
      */
-    String create() throws IOException;
+    ImageVO create() throws IOException;
 
     /**
      * 检验输入的验证码是否正确
