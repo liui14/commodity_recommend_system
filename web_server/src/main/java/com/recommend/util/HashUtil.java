@@ -24,10 +24,10 @@ public class HashUtil {
      * 对密码进行哈希处理
      *
      * @param password 原始密码
-     * @param salt     盐值（Base64编码）
      * @return 哈希后的字符串，格式为 `salt:hash`
      */
-    public static String hashPassword(String password, String salt) {
+    public static String hashPassword(String password) {
+        String salt = generateSalt();
         if (StrUtil.isEmpty(password) || StrUtil.isEmpty(salt)) {
             throw new IllegalArgumentException("密码和盐值不能为空");
         }
@@ -60,10 +60,9 @@ public class HashUtil {
     public static void main(String[] args) {
         // 测试示例
         String password = "mySecurePassword";
-        String salt = HashUtil.generateSalt();
-        System.out.println("生成的盐值: " + salt);
 
-        String hashedPassword = HashUtil.hashPassword(password, salt);
+
+        String hashedPassword = HashUtil.hashPassword(password);
         System.out.println("哈希后的密码: " + hashedPassword);
 
         boolean isMatch = HashUtil.verifyPassword(password, hashedPassword);

@@ -42,4 +42,13 @@ public class RequestHolder {
         return Optional.ofNullable(getRequest().getHeader("Code-Token"));
     }
 
+    /**
+     * 获取请求头中的Email-Token值
+     *
+     * @return {@link Optional<String>}
+     */
+    public static Optional<String> getEmailToken() {
+        return Optional.ofNullable(getRequest().getHeader("Email-Token"));
+    }
+
 }

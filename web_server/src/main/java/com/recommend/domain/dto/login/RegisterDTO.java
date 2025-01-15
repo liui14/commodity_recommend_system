@@ -14,6 +14,10 @@ public class RegisterDTO {
 
     @NotNull
     @NotEmpty
+    private String emailCode;
+
+    @NotNull
+    @NotEmpty
     private String uname;
 
     @NotNull
