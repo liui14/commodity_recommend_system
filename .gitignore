@@ -19,16 +19,7 @@ logs/
 # 忽略Java编译生成文件
 *.class
 
-# 忽略Node.js相关的依赖和缓存
-/user_web/node_modules/
-/data_web/node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# 忽略Vue3项目的打包输出
-/user_web/dist/
-/data_web/dist/
 
 # 忽略临时文件和调试输出
 *.swp
@@ -36,22 +27,7 @@ yarn-error.log*
 *.bak
 *.tmp
 
-# 忽略测试覆盖率报告
-/user_web/coverage/
-/data_web/coverage/
-/web_server/coverage/
 
-# 忽略环境配置文件（根据需要修改）
-/user_web/.env
-/data_web/.env
-/user_web/.env.local
-/data_web/.env.local
-
-# 忽略缓存文件
-/user_web/.vite/
-/data_web/.vite/
-/user_web/.cache/
-/data_web/.cache/
 
 # 忽略特定工具生成的文件
 /web_server/out/
