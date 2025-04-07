@@ -1,11 +1,11 @@
 package com.recommend.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.recommend.domain.po.ProductPO;
-import org.apache.ibatis.annotations.Mapper;
+import com.recommend.mapper.ProductMapper;
 import org.springframework.stereotype.Repository;
 
-@Mapper
 @Repository
-public interface ProductDao extends BaseMapper<ProductPO> {
+public class ProductDao extends ServiceImpl<ProductMapper, ProductPO> implements IService<ProductPO> {
 }

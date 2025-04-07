@@ -34,25 +34,23 @@ public class RedisEmailService implements EmailService {
         log.info("code: {}", code);
         boolean result = emailUtil.sendVerificationCode(toEMail, code);
         if (result) {
-            redisUtil.set(token, code, 5);
-            EmailVO emailVO = new EmailVO();
-            emailVO.setEmailToken(token);
-            return emailVO;
+            redisUtil.set(toEMail, code, 5);
+            return null;
         }
         return null;
     }
 
     @Override
-    public Boolean verify(String verCode) {
-        Object code = null;
-        verCode = verCode.toLowerCase();
-        Optional<String> optional = RequestHolder.getEmailToken();
-        if (optional.isPresent()) {
-            code = redisUtil.get(optional.get());
-            code = code == null ? null : code.toString().toLowerCase();
+    public Boolean verify(String email,String verCode) {
+        if(email == null || verCode == null) {
+            return false;
         }
+        Object code;
+        code = redisUtil.get(email);
+        code = code == null ? null : code.toString();
+
         if(code == null){
-            return null;
+            return false;
         }
         return code.equals(verCode);
     }

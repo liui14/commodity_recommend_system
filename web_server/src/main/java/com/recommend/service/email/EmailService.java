@@ -10,8 +10,9 @@ public interface EmailService {
     /**
      * 检验输入的验证码是否正确
      *
+     * @param email   邮箱
      * @param verCode 验证码
      * @return boolean
      */
-    Boolean verify(String verCode);
+    Boolean verify(String email,String verCode);
 }

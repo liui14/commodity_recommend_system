@@ -12,7 +12,7 @@ public class LocalEmailService implements EmailService {
     }
 
     @Override
-    public Boolean verify(String verCode) {
+    public Boolean verify(String email,String verCode) {
         return null;
     }
 }
